@@ -10,7 +10,7 @@ const url = 'https://swapi-api.hbtn.io/api/films/' + myArgs[0];
 request(url, async function (error, response, body) {
   if (!error) {
     const json = JSON.parse(body);
-    const endpoints = json.character;
+    const endpoints = json.characters;
     for (const endpoint of endpoints) {
       await new Promise(function (resolve, reject) {
         request(endpoint, function (error, response, body) {
